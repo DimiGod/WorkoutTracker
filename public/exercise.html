@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <link rel="stylesheet" href="style/style.css">
     <meta charset="UTF-8">
     <title>Workout Tracker</title>
     <style>
@@ -13,31 +12,42 @@
         font-size: 24px;
         /* align-self: auto; */
       }
-      /* textarea {
+
+      textarea {
         width: 300px;
         height: 50px;
       } */
-      /* h1, h2 {
+      h1, h2 {
         text-align: center;
-      } */
+      }
+
     </style>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="style/style.css">
   <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
   <!-- <link rel="shortcut icon" href="">   -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- <script src="../js/login.js"></script> -->
   </head>
   <body>
+  <div class="container">
+      <div class="jumbotron bg-dark text-white">
+      <div class="row">
+        <div class="col-md-8 offset-md-4">
     <form action="/addexercise" method="post">
-      <h2>Enter a exercise</h2>
-      <h2>Type of Exercise (Full Body, Upper Body, Lower Body, Core etc)</h2>
-      <input type="text" name="typeofexercise" placeholder="Full Body or Upper Body etc"></textarea>
+      <h1 style="margin-bottom:2em;">Enter an exercise</h1>
+      </div>
+      </div>
+      <h2>Type of Exercise</h2>
+      <input style="margin-bottom:2em;" type="text" name="typeofexercise"></textarea>
 
-      <h2>Name of Exercise (Running, Lifting etc)</h2>
-      <input type="text" name="exercise" placeholder="Enter an exercise here"></textarea>
+      <h2 >Name of Exercise (Running, Lifting etc)</h2>
+      <input style="margin-bottom:2em;" type="text" name="exercise"></textarea>
 
       <input type="submit">
     </form>
+    </div>
+  </div>
   </body>
 </html>
