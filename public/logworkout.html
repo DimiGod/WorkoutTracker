@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workout Tracker</title>
+    <style>
+      /* input {
+        display: block;
+        height: 36px; */
+        /* width: 350px; */
+        /* width: 400px; */
+        /* font-size: 24px; */
+        /* align-self: auto; */
+      /* } */
+      /* textarea {
+        width: 300px;
+        height: 50px;
+      } */
+      /* h1, h2 {
+        text-align: center;
+      } */
+      table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        /* tr:nth-child(even) {
+          background-color: #dddddd;
+        } */
+    </style>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
+      <!-- <link rel="shortcut icon" href="">   -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="../js/login.js"></script> -->
+  </head>
+  <body>
+
+    <h1>Log your workout here</h1>
+
+    <form action="/addworkout" method="post">
+        <h2>Name of Exercise</h2>
+        <input type="text" name="nameofexercise" placeholder="Enter exercise here"></textarea>
+
+        <h2>Weight</h2>
+        <input type="number" name="weightforexercise" placeholder="Enter weight here"></textarea>
+  
+        <h2>Sets</h2>
+        <input type="number" name="numberofsets" placeholder="Enter sets here"></textarea>
+
+        <h2>Repetitions</h2>
+        <input type="number" name="numberofrepetitions" placeholder="Enter repetitions here"></textarea>
+
+        <h2>Duration</h2>
+        <input type="number" name="durationofexercise" placeholder="Enter duration here"></textarea>
+  
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+  </body>
+</html>

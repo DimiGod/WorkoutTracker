@@ -1,3 +1,15 @@
-const db = require('../models');
+var db = require("../models");
 
-module.exports = function (app) {};
+var path = require("path");
+
+module.exports = function(app) {
+
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
+  });
+
+  // Render 404 page for any unmatched routes
+  // app.get("*", function(req, res) {
+  //   res.render("error");
+  // });
+};

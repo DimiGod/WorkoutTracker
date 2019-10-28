@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workout Tracker</title>
+    <style>
+      /* input { */
+        /* display: block;
+        height: 36px; */
+        /* width: 350px; */
+        /* width: auto; */
+        /* font-size: 24px; */
+        /* align-self: auto; */
+      /* } */
+      /* textarea {
+        width: 300px;
+        height: 50px;
+      } */
+      /* h1, h2 {
+        text-align: center;
+      } */
+    </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- <link rel="shortcut icon" href=""> -->
+    <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="../js/login.js"></script> -->
+    <script>src="./JS/newexercise.js"</script>
+    <script>src="./JS/newworkoutplan.js"</script>
+  </head>
+  <body>
+    <div class="jumbotron">
+        <h1 class="display-4">Patrick's Workout Tracker!</h1>
+        <p class="lead">Click the button to select from one of your workout plans.</p>
+        <p class="lead">
+          <a class="btn btn-danger btn-lg btn-block" href="#" role="button" id="startaworkout">Start a Workout</a>
+        </p>
+    </div>
+
+    <div class="jumbotron">
+        <p class="lead">Maintain Exercises</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button" id="newexercise">Add a new exercise</a>
+          <a class="btn btn-primary btn-lg" href="#" role="button" id="showallexercises">Show all available exercises</a>
+        </p>
+
+        <p class="lead">Maintain Workout Plans </p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button" id="newworkoutplan">Add a new workoutplan</a>
+          <a class="btn btn-primary btn-lg" href="#" role="button" id="showallworkoutplans">Show all available workout plans</a>
+        </p>
+    </div>
+
+<script>
+    $("#startaworkout").on("click", function(event) {
+        event.preventDefault();
+            window.location.href = "./workouts.html";
+      });
+    $("#newexercise").on("click", function(event) {
+        event.preventDefault();
+            window.location.href = "./exercise.html";
+      });
+      $("#showallexercises").on("click", function(event) {
+        event.preventDefault();
+            window.location.href = "./exerciseall.html";
+      });
+      $("#newworkoutplan").on("click", function(event) {
+        event.preventDefault();
+            window.location.href = "./workoutplan.html";
+      });
+      $("#showallworkoutplans").on("click", function(event) {
+        event.preventDefault();
+            window.location.href = "./workoutplansall.html";
+      });
+</script>
+
+</body>
+</html>

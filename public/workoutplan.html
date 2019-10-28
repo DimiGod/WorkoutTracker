@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workout Tracker</title>
+    <style>
+      input {
+        display: block;
+        height: 36px;
+        /* width: 350px; */
+        width: 400px;
+        font-size: 24px;
+        /* align-self: auto; */
+      }
+      /* textarea {
+        width: 300px;
+        height: 50px;
+      } */
+      /* h1, h2 {
+        text-align: center;
+      } */
+    </style>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
+      <!-- <link rel="shortcut icon" href="">   -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="../js/login.js"></script> -->
+  </head>
+  <body>
+    <form action="/createworkoutplan" method="post">
+    <h1>Create a workoutplan</h1>
+       <input type="text" name="nameofworkout" placeholder="Enter a name for your workout plan">
+       <br>
+       <br>
+      <h2>Pick an Exercise</h2>
+        <select name="exercisename" id="nameofexercise" size="10"></select>
+      </div>
+      <br>
+      <br>
+      <br>
+      <h2>Pick some exercise chararteristics (Select one or more)</h2>
+      <div>
+        <select multiple name="exerciseproperty" size="4">
+          <option value="Duration">Duration</option>
+          <option value="Sets">Sets</option>
+          <option value="Repetitions">Repetitions</option>
+          <option value="Weight">Weight</option>
+        </select>
+      </div>
+
+      <br>
+      <br>
+      <input type="submit">
+    </form>
+
+    <script>
+        var exerciseResultsArray = [];
+        getListOfExercises();
+        function getListOfExercises() {
+          $.get("/api/exercisesall", function(data) {
+            exerciseResultsArray = data;
+            console.log(exerciseResultsArray);
+            const selectElement = document.getElementById("nameofexercise")
+            for (i = 0; i < exerciseResultsArray.length; i++) {
+              console.log("Inside for loop" + i);
+              const optionValue = document.createElement('option')
+              optionValue.textContent = exerciseResultsArray[i].exercise
+              optionValue.value = exerciseResultsArray[i].exercise
+              selectElement.appendChild(optionValue)
+            }
+          });
+        }
+    </script>
+  </body>
+</html>
