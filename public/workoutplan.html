@@ -29,6 +29,8 @@
     <!-- <script src="../js/login.js"></script> -->
   </head>
   <body>
+    <div class="container">
+      <div class="jumbotron bg-dark text-white">
     <form action="/createworkoutplan" method="post">
     <h1>Create a workoutplan</h1>
        <input type="text" name="nameofworkout" placeholder="Enter a name for your workout plan">
@@ -54,7 +56,10 @@
       <br>
       <input type="submit">
     </form>
-
+  </div>
+  </div>
+<div class="container">
+  <div class="jumbotron">
     <script>
         var exerciseResultsArray = [];
         getListOfExercises();
@@ -73,5 +78,7 @@
           });
         }
     </script>
+    </div>
+  </div>
   </body>
 </html>
