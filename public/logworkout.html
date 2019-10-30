@@ -29,6 +29,15 @@
           text-align: left;
           padding: 8px;
         }
+        .container{
+          background:#444444;
+        }
+        h1{
+          color: white;
+        }
+        h2{
+          color:white;
+        }
         /* tr:nth-child(even) {
           background-color: #dddddd;
         } */
@@ -42,7 +51,8 @@
     <!-- <script src="../js/login.js"></script> -->
   </head>
   <body>
-
+    <div class="container" style="margin-top:1em;">
+      <div calss="jumbotron bg-dark text-white">
     <h1>Log your workout here</h1>
 
     <form action="/addworkout" method="post">
@@ -63,7 +73,9 @@
   
         <br>
         <br>
-        <input type="submit">
+        <input type="submit" style="margin-bottom:1em;">
     </form>
+  </div>
+  </div>
   </body>
 </html>
